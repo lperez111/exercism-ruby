@@ -13,7 +13,6 @@ class Raindrops
     	end
   	end
   	s = []
-  	prime_factors.each do |num|
 	  if prime_factors.include?(3)
 	  	s << "Pling"
 	  elsif prime_factors.include?(5)
