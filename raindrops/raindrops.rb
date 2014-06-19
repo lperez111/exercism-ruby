@@ -1,6 +1,5 @@
 require 'Prime'
 
-
 class Raindrops
 	def self.convert(num)
 		prime_factors = []
@@ -35,4 +34,4 @@ class Raindrops
 	end
 end
 
-Raindrops.convert(35)
+Raindrops.convert(52)
