@@ -1,5 +1,6 @@
 require 'Prime'
 
+
 class Raindrops
 	def self.convert(num)
 		prime_factors = []
@@ -15,13 +16,23 @@ class Raindrops
   	s = []
 	  if prime_factors.include?(3)
 	  	s << "Pling"
+	  	if prime_factors.include?(5)
+	  		s << "Plang"
+	  	elsif prime_factors.include?(7)
+	  		s << "Plong"
+	  	end
 	  elsif prime_factors.include?(5)
 	  	s << "Plang"
+	  	if prime_factors.include?(7)
+	  		s << "Plong"
+	  	end
 	  elsif prime_factors.include?(7)
 	  	s << "Plong"
 	  else
-	  	return num.to_s
+	  	return s << num.to_s
 	  end
 	  s.join
 	end
 end
+
+Raindrops.convert(35)
