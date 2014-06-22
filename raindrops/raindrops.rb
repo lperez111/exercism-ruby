@@ -1,5 +1,3 @@
-require 'Prime'
-
 class Raindrops
 	def self.convert(num)
 		return num.to_s if num % 3 != 0 && num % 5 != 0 && num % 7 != 0
