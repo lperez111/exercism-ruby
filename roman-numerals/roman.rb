@@ -1,4 +1,3 @@
-require 'benchmark'
 ROMAN_NUMERALS = {
 	1000 => 'M',
 	900	=> 'CM',
@@ -28,5 +27,7 @@ class Fixnum
     s
 	end
 end
-puts 123123123123.to_roman
-puts Benchmark.measure{ 123123123123.to_roman }
+
+1987.to_roman
+4009.to_roman
+2003.to_roman
