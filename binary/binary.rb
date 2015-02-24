@@ -5,7 +5,7 @@ class Binary
 
 	def to_binary
 		array = []
-		return 0 if is_num? == false
+		return 0 if is_num? == 0
 		until @num == 0
 			array << @num%2
 			@num = @num/2
@@ -14,20 +14,18 @@ class Binary
 	end
 
 	def to_decimal
+		return 0 if is_num? == 0
 		sums = []
 		array = @num.split('').reverse
 			array.each_with_index do |n,index|
-			x = n.to_i
-			sums << x*2**index
+				sums << (n.to_i)*2**index
 			end
 		sums.inject(:+)
 	end
 
-	private
-
 	def is_num?
-		@num == @num.to_i
+		@num.to_i
 	end
 end
 
-Binary.new('10001101000').to_decimal
+Binary.new('1001').to_decimal
