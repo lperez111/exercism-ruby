@@ -14,7 +14,13 @@ class Binary
 	end
 
 	def to_decimal
-		
+		sums = []
+		array = @num.split('').reverse
+			array.each_with_index do |n,index|
+			x = n.to_i
+			sums << x*2**index
+			end
+		sums.inject(:+)
 	end
 
 	private
@@ -24,4 +30,4 @@ class Binary
 	end
 end
 
-Binary.new(9).to_binary
+Binary.new('10001101000').to_decimal
